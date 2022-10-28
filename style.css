@@ -113,7 +113,7 @@ header a:hover {
   }
 }
 
-@media(max-width:858px) {
+@media(max-width:800px) {
   .checkbtn {
     width: 20px;
     height: 10px;
