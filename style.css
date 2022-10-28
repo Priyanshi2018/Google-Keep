@@ -13,83 +13,175 @@ body {
   display: flex;
   flex-wrap: wrap;
 }
- header{
-    background-color: rgb(173, 168, 168);
-    color:white;
-    width:100vw;
-    height:12vh;
-    justify-content: center;
-    margin-top: 2em;
-    display:flex;
+
+header {
+  background-color: rgb(173, 168, 168);
+  color: white;
+  width: 100vw;
+  height: 12vh;
+  justify-content: center;
+  margin-top: 2em;
+  display: flex;
 }
-.heading{
-    display:flex;
-    align-items: center;
-    padding-bottom:1rem;
-    padding-left: 2rem;
+
+.heading {
+  display: flex;
+  align-items: center;
+  padding-bottom: 1rem;
+  padding-left: 2rem;
 }
-.heading h1{
-    margin-left:1rem;
-    color:rgb(233, 203, 167);
-    font-size:3vw;
+
+.heading h1 {
+  margin-left: 1rem;
+  color: rgb(233, 203, 167);
+  font-size: 3vw;
 }
-.heading.logo{
-    width:auto;
-    height: 1em;
+
+.heading.logo {
+  width: auto;
+  height: 1em;
 }
+
 .add:active {
   transform: scale(0.98);
 }
- .btn-div {
+
+.btn-div {
   position: fixed;
   top: 7rem;
   right: 1rem;
-} 
-.box1{
+}
+
+header ul {
+  float: right;
+  margin-right: 20px;
+}
+.listit{
+  float:right;
+}
+
+header ul li {
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+  float : right;
+
+}
+
+header ul li a {
+  color: #696969;
+  font-size: 17px;
+  padding: 7px 13px;
+  border-radius: 3px;
+  text-transform: uppercase;
+  text-decoration: none;
+
+}
+
+header a:hover {
+
+  transition: 2s;
+  color: red;
+}
+
+.checkbtn {
+  font-size: 30px;
+  color: #000303;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+
+
+}
+
+#check {
+
+  display: none;
+
+}
+
+@media(max-width:952px) {
+  img.logo {
+    font-size: 30px;
+    padding-left: 50px;
+  }
+
+  header ul li a {
+    font-size: 16px;
+  }
+}
+
+@media(max-width:858px) {
+  .checkbtn {
+    width: 20px;
+    height: 10px;
+    display: block;
+  }
+
+  ul {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: #293d3d;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all.5s;
+    float:left;
+
+
+  }}
+
+  .box1 {
     float: center;
     text-align: center;
     padding: 1em;
     margin: 1em;
     border-radius: 1em;
-}
-button {
-  position: relative;
-  cursor: pointer;
-  border: 0;
-  vertical-align: middle;
-  text-decoration: none;
-  background: transparent;
-  padding: 0;
-  font-size: 30px;
-}
-button.learn-more {
-  width: 12rem;
-  height: auto;
-}
+  }
 
-button.learn-more .button-text {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  padding: 0.75rem 0;
-  margin: 0 0 0 1.85rem;
-  color: #282f91;
-  font-weight: 700;
-  line-height: 1.6;
-  text-align: center;
-  text-transform: uppercase;
-}
+  button {
+    position: relative;
+    cursor: pointer;
+    border: 0;
+    vertical-align: middle;
+    text-decoration: none;
+    background: transparent;
+    padding: 0;
+    font-size: 30px;
+  }
 
-button:hover .button-text {
-  color: rgb(9, 9, 9);
-  transform: translate(0.5rem, 0);
-}
-main {
+  button.learn-more {
+    width: 12rem;
+    height: auto;
+  }
+
+  button.learn-more .button-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0.75rem 0;
+    margin: 0 0 0 1.85rem;
+    color: #282f91;
+    font-weight: 700;
+    line-height: 1.6;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  button:hover .button-text {
+    color: rgb(9, 9, 9);
+    transform: translate(0.5rem, 0);
+  }
+
+  main {
     padding: 2rem;
   }
-  
+
   .note {
     background-color: #fff;
     margin: 30px 20px;
@@ -100,13 +192,13 @@ main {
     box-shadow: inset 1px 1px 0 rgba(0, 0, 0, 0.1),
       inset 0 -1px 0 rgba(0, 0, 0, 0.1);
   }
-  
+
   .note .operation {
     display: flex;
     justify-content: flex-end;
     padding: 0.5rem;
   }
-  
+
   .note .operation button {
     background-color: transparent;
     border: none;
@@ -115,7 +207,7 @@ main {
     font-size: 1rem;
     margin-left: 0.5rem;
   }
-  
+
   .note textarea {
     outline: none;
     font-family: inherit;
@@ -125,7 +217,7 @@ main {
     width: 100%;
     padding: 20px;
   }
-  
+
   .fa-edit,
   .fa-trash-alt {
     color: #fff;
@@ -133,23 +225,23 @@ main {
     background-color: grey;
     border-radius: 50%;
   }
-  
+
   .fa-trash-alt {
     background-color: grey;
   }
-  
+
   .fa-edit:hover {
     background-color: #fff;
     color: #27ae60;
     filter: drop-shadow(0px 10px 8px rgb(219, 218, 218));
   }
-  
+
   .fa-trash-alt:hover {
     background-color: #fff;
     color: #e74c3c;
     filter: drop-shadow(0px 10px 8px rgb(219, 218, 218));
   }
-  
+
   .hidden {
     display: none;
   }
